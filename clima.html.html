@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Încărcare Freon Auto R134A / R1234YF București Sector 6 | Logistik Speed Curier</title>
+  <meta name="description" content="Încărcare freon auto R134A / R1234YF și verificare AC în București, Sector 6. Verificare climatizare, completare freon, testare aer rece și control sistem aer condiționat." />
+  <meta name="keywords" content="încărcare freon auto București, freon R134A, freon R1234YF, încărcare freon Sector 6, verificare AC auto, climatizare auto București, aer condiționat auto, freon mașină, service AC auto" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg:#262626;
+      --bg-soft:#2f2f2f;
+      --panel:#353535;
+      --panel-2:#3d3d3d;
+      --line:#4b4b4b;
+      --line-soft:rgba(255,255,255,.10);
+      --text:#f3f5f7;
+      --muted:#c4c8cf;
+      --muted-2:#9aa1ab;
+      --accent:#ef4444;
+      --accent-soft:rgba(239,68,68,.16);
+      --shadow:0 18px 50px rgba(0,0,0,.30);
+      --radius:24px;
+      --container:min(1180px, calc(100vw - 40px));
+    }
+
+    * { box-sizing:border-box; }
+    html, body {
+      width:100%;
+      overflow-x:hidden;
+      scroll-behavior:smooth;
+    }
+
+    body {
+      margin:0;
+      color:var(--text);
+      font-family:'Inter', sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(239,68,68,.08), transparent 18%),
+        linear-gradient(180deg, #262626 0%, #1f1f1f 100%);
+    }
+
+    body::before {
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px);
+      background-size:56px 56px;
+      opacity:.45;
+      z-index:0;
+    }
+
+    a { color:inherit; }
+    img { max-width:100%; display:block; }
+
+    .container {
+      width:var(--container);
+      margin:0 auto;
+      position:relative;
+      z-index:1;
+    }
+
+    .section { padding:42px 0; }
+
+    .topbar {
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter:blur(18px);
+      background:rgba(24,24,24,.84);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+
+    .nav {
+      min-height:76px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+    }
+
+    .brand {
+      display:flex;
+      align-items:center;
+      gap:14px;
+      text-decoration:none;
+      color:var(--text);
+    }
+
+    .brand-logo {
+      width:44px;
+      height:44px;
+      border-radius:14px;
+      padding:4px;
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border:1px solid var(--line-soft);
+      object-fit:contain;
+    }
+
+    .brand-name {
+      display:block;
+      font-size:18px;
+      font-weight:800;
+      letter-spacing:.02em;
+    }
+
+    .brand-sub {
+      display:block;
+      color:var(--muted-2);
+      font-size:12px;
+      margin-top:3px;
+    }
+
+    .nav-links {
+      display:flex;
+      align-items:center;
+      gap:24px;
+      flex-wrap:wrap;
+    }
+
+    .nav-links a {
+      text-decoration:none;
+      color:var(--muted);
+      font-size:14px;
+      font-weight:600;
+    }
+
+    .nav-links a:hover { color:var(--text); }
+
+    .nav-cta {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:12px 18px;
+      border-radius:999px;
+      text-decoration:none;
+      background:var(--accent);
+      color:#fff;
+      font-weight:700;
+      box-shadow:0 10px 26px rgba(239,68,68,.22);
+    }
+
+    .hero {
+      padding:48px 0 22px;
+    }
+
+    .hero-box,
+    .card,
+    .cta-box,
+    .notice-box {
+      border-radius:30px;
+      border:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(53,53,53,.96), rgba(33,33,33,.96));
+      box-shadow:var(--shadow);
+    }
+
+    .hero-box {
+      padding:28px;
+    }
+
+    h1, h2, h3, h4 {
+      font-family:'Rajdhani', sans-serif;
+      text-transform:uppercase;
+      letter-spacing:.02em;
+      margin:0;
+      line-height:1;
+    }
+
+    .hero-box h1 {
+      margin-top:0;
+      font-size:clamp(30px, 5vw, 52px);
+      line-height:.95;
+    }
+
+    .hero-box h1 span {
+      display:block;
+      color:#b4bbc4;
+      font-size:clamp(18px, 2.8vw, 24px);
+      margin-top:8px;
+    }
+
+    .hero-lead {
+      margin:16px 0 0;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.65;
+      max-width:100%;
+    }
+
+    .hero-actions {
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:24px;
+      width:100%;
+    }
+
+    .btn {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:9px 15px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:700;
+      font-size:13px;
+      border:1px solid transparent;
+      transition:.2s ease;
+      min-height:40px;
+      color:#fff;
+    }
+
+    .btn:hover { transform:translateY(-1px); }
+
+    .btn-primary {
+      background:var(--accent);
+      box-shadow:0 12px 28px rgba(239,68,68,.24);
+    }
+
+    .btn-whatsapp { background:#22c55e; }
+    .btn-secondary {
+      background:rgba(255,255,255,.04);
+      color:var(--text);
+      border-color:var(--line-soft);
+    }
+
+    .section-head {
+      display:grid;
+      grid-template-columns:1fr .9fr;
+      gap:20px;
+      align-items:end;
+      margin-bottom:18px;
+    }
+
+    .section-head h2 {
+      font-size:clamp(24px, 4vw, 34px);
+      line-height:1;
+    }
+
+    .section-head p {
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.65;
+    }
+
+    .grid-3 {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+
+    .grid-2 {
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:16px;
+    }
+
+    .card {
+      padding:20px;
+    }
+
+    .card h3 {
+      font-size:21px;
+      margin-bottom:10px;
+    }
+
+    .card p,
+    .card li {
+      margin:0;
+      color:var(--muted);
+      line-height:1.65;
+      font-size:13px;
+    }
+
+    .card ul {
+      margin:0;
+      padding-left:18px;
+    }
+
+    .notice-box {
+      padding:22px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+      align-items:start;
+    }
+
+    .notice-box h2 {
+      font-size:clamp(24px, 4vw, 34px);
+      margin-bottom:12px;
+    }
+
+    .notice-box p {
+      margin:0;
+      color:var(--muted);
+      line-height:1.7;
+      font-size:14px;
+    }
+
+    .check-list {
+      display:grid;
+      gap:12px;
+    }
+
+    .check-item {
+      padding:14px 16px;
+      border-radius:18px;
+      background:rgba(255,255,255,.03);
+      border:1px solid var(--line-soft);
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.55;
+    }
+
+    .check-item strong {
+      display:block;
+      color:var(--text);
+      margin-bottom:4px;
+      font-size:14px;
+    }
+
+    .cta-box {
+      padding:26px;
+      text-align:center;
+    }
+
+    .cta-box h2 {
+      font-size:clamp(26px, 4vw, 38px);
+      line-height:1;
+      margin-bottom:12px;
+    }
+
+    .cta-box p {
+      margin:0 auto 20px;
+      color:var(--muted);
+      line-height:1.7;
+      max-width:760px;
+      font-size:14px;
+    }
+
+    .footer {
+      padding:26px 0 56px;
+      border-top:1px solid rgba(255,255,255,.06);
+    }
+
+    .footer-row {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
+    .footer-links {
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
+    .footer-links a {
+      color:var(--muted);
+      text-decoration:none;
+      font-weight:600;
+      font-size:14px;
+    }
+
+    .footer small {
+      color:var(--muted-2);
+      font-size:13px;
+    }
+
+    @media (max-width: 1100px) {
+      .section-head,
+      .grid-3,
+      .grid-2,
+      .notice-box {
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container { width:min(100vw - 24px, 1180px); }
+
+      .nav {
+        flex-direction:column;
+        align-items:flex-start;
+        padding:14px 0;
+      }
+
+      .nav-links {
+        width:100%;
+        gap:14px;
+      }
+
+      .hero-box,
+      .card,
+      .cta-box,
+      .notice-box {
+        border-radius:24px;
+      }
+
+      .hero-box,
+      .cta-box,
+      .card,
+      .notice-box {
+        padding:18px;
+      }
+
+      .hero-actions {
+        flex-direction:column;
+        align-items:stretch;
+      }
+
+      .hero-actions .btn {
+        width:100%;
+        max-width:100%;
+        justify-content:center;
+        text-align:center;
+        white-space:normal;
+        box-sizing:border-box;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <nav class="nav">
+        <a class="brand" href="index.html" aria-label="Logistik Speed Curier">
+          <img class="brand-logo" src="nealegipenoi.png" alt="Logistik Speed Curier">
+          <div>
+            <span class="brand-name">Logistik Speed Curier</span>
+            <span class="brand-sub">Service Auto, AC, Freon, Climatizare</span>
+          </div>
+        </a>
+
+        <div class="nav-links">
+          <a href="index.html#acasa">Acasă</a>
+          <a href="index.html#servicii">Servicii</a>
+          <a href="index.html#galerie">Galerie</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+
+        <a class="nav-cta" href="tel:0766799157">Apelează acum</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-box">
+          <h1>
+            Încărcare freon auto și verificare AC
+            <span>Freon R134A / R1234YF, testare aer rece și control sistem aer condiționat</span>
+          </h1>
+
+          <p class="hero-lead">
+            Dacă aerul condiționat nu mai răcește bine, pornește greu, scoate miros neplăcut sau simți că sistemul nu mai funcționează ca înainte, este momentul pentru o verificare. La Logistik Speed Curier facem verificare AC auto, încărcare freon R134A / R1234YF și control de bază al sistemului de climatizare.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="lucrari-ac">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Servicii pentru aer condiționat auto</h2>
+          </div>
+          <p>
+            Verificăm funcționarea sistemului AC și intervenim pentru răcire mai bună, confort și utilizare corectă în sezonul cald.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>Încărcare freon R134A</h3>
+            <p>Completăm agentul frigorific R134A pentru mașinile compatibile, în funcție de necesarul instalației AC.</p>
+          </article>
+
+          <article class="card">
+            <h3>Încărcare freon R1234YF</h3>
+            <p>Completăm agentul frigorific R1234YF pentru mașinile compatibile cu acest tip de freon.</p>
+          </article>
+
+          <article class="card">
+            <h3>Verificare AC</h3>
+            <p>Verificăm dacă sistemul pornește corect, dacă răcește și dacă există simptome vizibile de funcționare slabă.</p>
+          </article>
+
+          <article class="card">
+            <h3>Testare aer rece</h3>
+            <p>Verificăm temperatura aerului evacuat prin gurile de ventilație pentru a observa eficiența sistemului.</p>
+          </article>
+
+          <article class="card">
+            <h3>Verificare pierderi</h3>
+            <p>Controlăm sistemul pentru semne care pot indica pierderi de freon sau funcționare incorectă.</p>
+          </article>
+
+          <article class="card">
+            <h3>Control compresor</h3>
+            <p>Verificăm pornirea compresorului și comportamentul sistemului atunci când activezi aerul condiționat.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="proces">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Cum lucrăm</h2>
+          </div>
+          <p>
+            Verificăm simptomele, controlăm funcționarea sistemului și facem intervenția potrivită pentru climatizare.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>1. Verificare</h3>
+            <p>Analizăm cum răcește sistemul, dacă pornește compresorul și ce simptome ai observat.</p>
+          </article>
+
+          <article class="card">
+            <h3>2. Încărcare sau control</h3>
+            <p>Completăm freonul potrivit, R134A sau R1234YF, ori facem verificări suplimentare, în funcție de starea sistemului AC.</p>
+          </article>
+
+          <article class="card">
+            <h3>3. Test final</h3>
+            <p>Verificăm temperatura aerului și modul în care funcționează climatizarea după intervenție.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="cand">
+      <div class="container">
+        <div class="notice-box">
+          <div>
+            <h2>Când ai nevoie de verificare AC</h2>
+            <p>
+              Ai nevoie de verificare când aerul condiționat nu mai răcește suficient, se simte un miros neplăcut, geamurile se dezaburesc greu sau sistemul pornește diferit față de normal.
+            </p>
+          </div>
+
+          <div class="check-list">
+            <div class="check-item">
+              <strong>Aer slab sau cald</strong>
+              Poate indica nivel scăzut de freon, funcționare slabă sau o problemă în sistem.
+            </div>
+            <div class="check-item">
+              <strong>Miros neplăcut</strong>
+              Poate apărea de la filtrul de habitaclu, instalație murdară sau umiditate în sistem.
+            </div>
+            <div class="check-item">
+              <strong>Răcire neuniformă</strong>
+              Poate fi nevoie de verificarea instalației, a compresorului sau a presiunii din sistem.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="beneficii">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>De ce contează climatizarea verificată</h2>
+          </div>
+          <p>
+            Un sistem AC funcțional îți oferă confort, ajută la dezaburire și face drumurile mai plăcute în perioadele calde.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>Confort mai bun</h3>
+            <p>Aerul rece ajută la o temperatură mai bună în habitaclu, mai ales vara sau în trafic aglomerat.</p>
+          </article>
+
+          <article class="card">
+            <h3>Dezaburire mai rapidă</h3>
+            <p>Sistemul AC ajută la controlul umidității și la dezaburirea mai eficientă a geamurilor.</p>
+          </article>
+
+          <article class="card">
+            <h3>Probleme observate la timp</h3>
+            <p>O verificare poate indica pierderi, funcționare slabă sau componente care trebuie controlate.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="recomandari">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Ce să ne spui înainte de programare</h2>
+          </div>
+          <p>
+            Câteva detalii simple ne ajută să înțelegem mai rapid problema sistemului de climatizare.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card">
+            <h3>Simptome AC</h3>
+            <ul>
+              <li>aerul nu mai răcește</li>
+              <li>aerul este rece doar pe o parte</li>
+              <li>miros neplăcut la pornire</li>
+              <li>zgomote când pornește AC-ul</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Informații utile</h3>
+            <ul>
+              <li>marca și modelul mașinii</li>
+              <li>când a fost încărcat ultima dată freonul</li>
+              <li>dacă ai schimbat filtrul de habitaclu</li>
+              <li>dacă sistemul a pierdut rapid răcirea</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Programează verificarea AC sau încărcarea cu freon</h2>
+          <p>
+            Spune-ne ce problemă ai observat la aerul condiționat și, dacă știi, ce tip de freon folosește mașina: R134A sau R1234YF. Te ajutăm cu o programare pentru verificare sau încărcare freon.
+          </p>
+          <div class="hero-actions" style="justify-content:center;">
+            <a href="tel:0766799157" class="btn btn-primary">Apelează acum</a>
+            <a href="https://wa.me/40766799157?text=Bună%20ziua,%20aș%20dori%20o%20programare%20pentru%20încărcare%20freon%20sau%20verificare%20AC.%20Mașina%20este:" target="_blank" rel="noopener" class="btn btn-whatsapp">Programare pe WhatsApp</a>
+            <a href="index.html#contact" class="btn btn-secondary">Vezi contact</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-row">
+        <small>© Logistik Speed Curier. Încărcare freon auto R134A / R1234YF, verificare AC și service auto București, Sector 6.</small>
+        <div class="footer-links">
+          <a href="index.html">Acasă</a>
+          <a href="index.html#servicii">Servicii</a>
+          <a href="index.html#galerie">Galerie</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

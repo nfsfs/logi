@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Revizie Auto București Sector 6 | Logistik Speed Curier</title>
+  <meta name="description" content="Revizie auto și întreținere în București, Sector 6. Schimb ulei, filtre, verificări de bază, mentenanță rapidă și piese multimarcă pe stoc." />
+  <meta name="keywords" content="revizie auto București, revizie auto Sector 6, schimb ulei București, schimb filtre auto, întreținere auto, mentenanță auto rapidă, piese multimarcă, service auto București Sector 6, diagnoză auto" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg:#262626;
+      --bg-soft:#2f2f2f;
+      --panel:#353535;
+      --panel-2:#3d3d3d;
+      --line:#4b4b4b;
+      --line-soft:rgba(255,255,255,.10);
+      --text:#f3f5f7;
+      --muted:#c4c8cf;
+      --muted-2:#9aa1ab;
+      --accent:#ef4444;
+      --accent-soft:rgba(239,68,68,.16);
+      --shadow:0 18px 50px rgba(0,0,0,.30);
+      --radius:24px;
+      --container:min(1180px, calc(100vw - 40px));
+    }
+
+    * { box-sizing:border-box; }
+    html, body {
+      width:100%;
+      overflow-x:hidden;
+      scroll-behavior:smooth;
+    }
+
+    body {
+      margin:0;
+      color:var(--text);
+      font-family:'Inter', sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(239,68,68,.08), transparent 18%),
+        linear-gradient(180deg, #262626 0%, #1f1f1f 100%);
+    }
+
+    body::before {
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px);
+      background-size:56px 56px;
+      opacity:.45;
+      z-index:0;
+    }
+
+    a { color:inherit; }
+    img { max-width:100%; display:block; }
+
+    .container {
+      width:var(--container);
+      margin:0 auto;
+      position:relative;
+      z-index:1;
+    }
+
+    .section { padding:42px 0; }
+
+    .topbar {
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter:blur(18px);
+      background:rgba(24,24,24,.84);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+
+    .nav {
+      min-height:76px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+    }
+
+    .brand {
+      display:flex;
+      align-items:center;
+      gap:14px;
+      text-decoration:none;
+      color:var(--text);
+    }
+
+    .brand-logo {
+      width:44px;
+      height:44px;
+      border-radius:14px;
+      padding:4px;
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border:1px solid var(--line-soft);
+      object-fit:contain;
+    }
+
+    .brand-name {
+      display:block;
+      font-size:18px;
+      font-weight:800;
+      letter-spacing:.02em;
+    }
+
+    .brand-sub {
+      display:block;
+      color:var(--muted-2);
+      font-size:12px;
+      margin-top:3px;
+    }
+
+    .nav-links {
+      display:flex;
+      align-items:center;
+      gap:24px;
+      flex-wrap:wrap;
+    }
+
+    .nav-links a {
+      text-decoration:none;
+      color:var(--muted);
+      font-size:14px;
+      font-weight:600;
+    }
+
+    .nav-links a:hover { color:var(--text); }
+
+    .nav-cta {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:12px 18px;
+      border-radius:999px;
+      text-decoration:none;
+      background:var(--accent);
+      color:#fff;
+      font-weight:700;
+      box-shadow:0 10px 26px rgba(239,68,68,.22);
+    }
+
+    .hero {
+      padding:48px 0 22px;
+    }
+
+    .hero-box,
+    .card,
+    .cta-box,
+    .notice-box {
+      border-radius:30px;
+      border:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(53,53,53,.96), rgba(33,33,33,.96));
+      box-shadow:var(--shadow);
+    }
+
+    .hero-box {
+      padding:28px;
+    }
+
+    .eyebrow {
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      width:max-content;
+      max-width:100%;
+      padding:8px 14px;
+      border-radius:999px;
+      border:1px solid rgba(239,68,68,.25);
+      background:rgba(239,68,68,.08);
+      color:#ff9c9c;
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      font-weight:700;
+    }
+
+    h1, h2, h3, h4 {
+      font-family:'Rajdhani', sans-serif;
+      text-transform:uppercase;
+      letter-spacing:.02em;
+      margin:0;
+      line-height:1;
+    }
+
+    .hero-box h1 {
+      margin-top:14px;
+      font-size:clamp(30px, 5vw, 52px);
+      line-height:.95;
+    }
+
+    .hero-box h1 span {
+      display:block;
+      color:#b4bbc4;
+      font-size:clamp(18px, 2.8vw, 24px);
+      margin-top:8px;
+    }
+
+    .hero-lead {
+      margin:16px 0 0;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.65;
+      max-width:100%;
+    }
+
+    .hero-grid {
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:18px;
+      margin-top:24px;
+    }
+
+    .hero-info {
+      padding:18px;
+      border-radius:22px;
+      background:rgba(255,255,255,.03);
+      border:1px solid var(--line-soft);
+    }
+
+    .hero-info h3 {
+      font-size:20px;
+      margin-bottom:10px;
+    }
+
+    .hero-info p,
+    .hero-info li {
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.6;
+      margin:0;
+    }
+
+    .hero-info ul {
+      margin:0;
+      padding-left:18px;
+    }
+
+    .hero-actions {
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:24px;
+      width:100%;
+    }
+
+    .btn {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:9px 15px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:700;
+      font-size:13px;
+      border:1px solid transparent;
+      transition:.2s ease;
+      min-height:40px;
+      color:#fff;
+    }
+
+    .btn:hover { transform:translateY(-1px); }
+
+    .btn-primary {
+      background:var(--accent);
+      box-shadow:0 12px 28px rgba(239,68,68,.24);
+    }
+
+    .btn-whatsapp { background:#22c55e; }
+    .btn-secondary {
+      background:rgba(255,255,255,.04);
+      color:var(--text);
+      border-color:var(--line-soft);
+    }
+
+    .section-head {
+      display:grid;
+      grid-template-columns:1fr .9fr;
+      gap:20px;
+      align-items:end;
+      margin-bottom:18px;
+    }
+
+    .section-head h2 {
+      font-size:clamp(24px, 4vw, 34px);
+      line-height:1;
+    }
+
+    .section-head p {
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.65;
+    }
+
+    .grid-3 {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+
+    .grid-2 {
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:16px;
+    }
+
+    .card {
+      padding:20px;
+    }
+
+    .card h3 {
+      font-size:21px;
+      margin-bottom:10px;
+    }
+
+    .card p,
+    .card li {
+      margin:0;
+      color:var(--muted);
+      line-height:1.65;
+      font-size:13px;
+    }
+
+    .card ul {
+      margin:0;
+      padding-left:18px;
+    }
+
+    .notice-box {
+      padding:22px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+      align-items:start;
+    }
+
+    .notice-box h2 {
+      font-size:clamp(24px, 4vw, 34px);
+      margin-bottom:12px;
+    }
+
+    .notice-box p {
+      margin:0;
+      color:var(--muted);
+      line-height:1.7;
+      font-size:14px;
+    }
+
+    .check-list {
+      display:grid;
+      gap:12px;
+    }
+
+    .check-item {
+      padding:14px 16px;
+      border-radius:18px;
+      background:rgba(255,255,255,.03);
+      border:1px solid var(--line-soft);
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.55;
+    }
+
+    .check-item strong {
+      display:block;
+      color:var(--text);
+      margin-bottom:4px;
+      font-size:14px;
+    }
+
+    .cta-box {
+      padding:26px;
+      text-align:center;
+    }
+
+    .cta-box h2 {
+      font-size:clamp(26px, 4vw, 38px);
+      line-height:1;
+      margin-bottom:12px;
+    }
+
+    .cta-box p {
+      margin:0 auto 20px;
+      color:var(--muted);
+      line-height:1.7;
+      max-width:760px;
+      font-size:14px;
+    }
+
+    .footer {
+      padding:26px 0 56px;
+      border-top:1px solid rgba(255,255,255,.06);
+    }
+
+    .footer-row {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
+    .footer-links {
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
+    .footer-links a {
+      color:var(--muted);
+      text-decoration:none;
+      font-weight:600;
+      font-size:14px;
+    }
+
+    .footer small {
+      color:var(--muted-2);
+      font-size:13px;
+    }
+
+    @media (max-width: 1100px) {
+      .hero-grid,
+      .section-head,
+      .grid-3,
+      .grid-2,
+      .notice-box {
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container { width:min(100vw - 24px, 1180px); }
+
+      .nav {
+        flex-direction:column;
+        align-items:flex-start;
+        padding:14px 0;
+      }
+
+      .nav-links {
+        width:100%;
+        gap:14px;
+      }
+
+      .hero-box,
+      .card,
+      .cta-box,
+      .notice-box {
+        border-radius:24px;
+      }
+
+      .hero-box,
+      .cta-box,
+      .card,
+      .notice-box {
+        padding:18px;
+      }
+
+      .hero-actions {
+        flex-direction:column;
+        align-items:stretch;
+      }
+
+      .hero-actions .btn {
+        width:100%;
+        max-width:100%;
+        justify-content:center;
+        text-align:center;
+        white-space:normal;
+        box-sizing:border-box;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <nav class="nav">
+        <a class="brand" href="index.html" aria-label="Logistik Speed Curier">
+          <img class="brand-logo" src="nealegipenoi.png" alt="Logistik Speed Curier">
+          <div>
+            <span class="brand-name">Logistik Speed Curier</span>
+            <span class="brand-sub">Service Auto, Revizie, Diagnoză, Întreținere</span>
+          </div>
+        </a>
+
+        <div class="nav-links">
+          <a href="index.html#acasa">Acasă</a>
+          <a href="index.html#servicii">Servicii</a>
+          <a href="index.html#galerie">Galerie</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+
+        <a class="nav-cta" href="tel:0766799157">Apelează acum</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-box">
+
+          <h1>
+            Revizie și întreținere auto
+            <span>Schimb ulei, filtre, verificări și mentenanță rapidă</span>
+          </h1>
+
+          <p class="hero-lead">
+            O revizie făcută la timp te ajută să eviți probleme mai costisitoare și să păstrezi mașina într-o stare bună de funcționare. La Logistik Speed Curier facem revizii auto, schimb ulei, schimb filtre și lucrări uzuale de mentenanță, cu posibilitate de intervenție rapidă în funcție de programare și disponibilitatea pieselor.
+          </p>
+
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="servicii-revizie">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Lucrări uzuale de întreținere</h2>
+          </div>
+          <p>
+            Aici găsești lucrările principale incluse într-o revizie auto, prezentate clar, ca să înțelegi rapid ce poate fi verificat sau înlocuit.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>Schimb ulei motor</h3>
+            <p>Înlocuim uleiul motor în funcție de motorizare, intervalul de service și recomandările potrivite pentru mașina ta.</p>
+          </article>
+
+          <article class="card">
+            <h3>Filtru ulei și aer</h3>
+            <p>Schimbăm filtrul de ulei și filtrul de aer, două consumabile importante pentru protecția motorului și funcționare corectă.</p>
+          </article>
+
+          <article class="card">
+            <h3>Filtru habitaclu</h3>
+            <p>Înlocuim filtrul de habitaclu pentru aer mai curat în interior și funcționare mai bună a sistemului de ventilație.</p>
+          </article>
+
+          <article class="card">
+            <h3>Filtru combustibil</h3>
+            <p>Verificăm și înlocuim filtrul de combustibil atunci când este necesar, în funcție de mașină și tipul de motor.</p>
+          </article>
+
+          <article class="card">
+            <h3>Lichide și niveluri</h3>
+            <p>Verificăm lichidul de răcire, lichidul de frână, lichidul de parbriz și completăm unde este necesar.</p>
+          </article>
+
+          <article class="card">
+            <h3>Frâne, direcție, suspensie</h3>
+            <p>Facem verificări de bază pentru frâne, direcție și suspensie, ca să identificăm din timp eventuale probleme.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section" id="mentenanta-rapida">
+      <div class="container">
+        <div class="notice-box">
+          <div>
+            <h2>Mentenanță rapidă, cu piese multimarcă pe stoc</h2>
+            <p>
+              Pentru multe lucrări uzuale de mentenanță, intervenția se poate face rapid, în funcție de programare, tipul mașinii și disponibilitatea pieselor. Avem stoc de piese multimarcă, ceea ce ajută la reducerea timpului de așteptare și la rezolvarea mai rapidă a lucrărilor de întreținere.
+            </p>
+          </div>
+
+          <div class="check-list">
+            <div class="check-item">
+              <strong>Piese multimarcă</strong>
+              Stoc disponibil pentru mai multe mărci auto, în funcție de lucrare, motorizare și compatibilitate.
+            </div>
+            <div class="check-item">
+              <strong>Intervenții rapide</strong>
+              Multe lucrări de mentenanță se pot rezolva în aceeași zi, fără timp mare de așteptare.
+            </div>
+            <div class="check-item">
+              <strong>Timp estimativ 2-4 ore</strong>
+              Pentru lucrări uzuale, timpul poate fi între 2 și 4 ore, în funcție de complexitate și programare.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="proces">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Cum lucrăm</h2>
+          </div>
+          <p>
+            Procesul este simplu și clar. Stabilim ce trebuie făcut, verificăm disponibilitatea pieselor, executăm revizia și îți comunicăm dacă observăm probleme.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>1. Verificare mașină</h3>
+            <p>Identificăm motorizarea, intervalul de revizie, piesele necesare și lucrările potrivite pentru mașina ta.</p>
+          </article>
+
+          <article class="card">
+            <h3>2. Schimb consumabile</h3>
+            <p>Înlocuim uleiul și filtrele stabilite, cu atenție la procedură, compatibilitatea pieselor și timpul de execuție.</p>
+          </article>
+
+          <article class="card">
+            <h3>3. Control final</h3>
+            <p>Verificăm nivelurile, pornirea, eventualele scurgeri și îți spunem dacă mașina necesită alte intervenții.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="cand">
+      <div class="container">
+        <div class="notice-box">
+          <div>
+            <h2>Când ai nevoie de revizie</h2>
+            <p>
+              Revizia trebuie făcută la intervalul recomandat pentru mașina ta sau mai devreme dacă folosești mașina intens, mergi mult în oraș, faci drumuri scurte sau observi zgomote, consum crescut ori martori aprinși în bord.
+            </p>
+          </div>
+
+          <div class="check-list">
+            <div class="check-item">
+              <strong>La intervalul de kilometri</strong>
+              Când mașina a ajuns la numărul de kilometri recomandat pentru schimbul de ulei și filtre.
+            </div>
+            <div class="check-item">
+              <strong>Înainte de drum lung</strong>
+              Când vrei să verifici mașina înainte de concediu, cursă lungă sau utilizare intensă.
+            </div>
+            <div class="check-item">
+              <strong>După cumpărarea mașinii</strong>
+              Când ai cumpărat o mașină second-hand și vrei să începi cu o întreținere corectă.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="beneficii">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Avantajele unei revizii la timp</h2>
+          </div>
+          <p>
+            O revizie făcută corect reduce riscul de defecțiuni, protejează motorul și te ajută să folosești mașina cu mai multă încredere.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>Protejezi motorul</h3>
+            <p>Uleiul și filtrele schimbate la timp ajută motorul să funcționeze mai curat și mai eficient.</p>
+          </article>
+
+          <article class="card">
+            <h3>Eviți costuri mari</h3>
+            <p>Problemele mici observate la timp pot preveni reparații mai scumpe pe termen lung.</p>
+          </article>
+
+          <article class="card">
+            <h3>Crește siguranța</h3>
+            <p>Verificările de bază la frâne, direcție, suspensie și lichide ajută la o utilizare mai sigură a mașinii.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="recomandari">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Ce poți verifica între revizii</h2>
+          </div>
+          <p>
+            Câteva verificări simple pot ajuta mașina până la următoarea vizită în service.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card">
+            <h3>Verifică nivelurile</h3>
+            <ul>
+              <li>ulei motor</li>
+              <li>lichid de răcire</li>
+              <li>lichid de frână</li>
+              <li>lichid de parbriz</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Urmărește simptomele</h3>
+            <ul>
+              <li>martori aprinși în bord</li>
+              <li>zgomote noi la frânare sau virare</li>
+              <li>vibrații, mirosuri sau scurgeri</li>
+              <li>consum crescut sau pornire grea</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Programează revizia mașinii</h2>
+          <p>
+            Spune-ne marca, modelul, motorizarea și ce revizie vrei să faci. Verificăm disponibilitatea pieselor și te ajutăm cu o programare pentru intervenție rapidă.
+          </p>
+          <div class="hero-actions" style="justify-content:center;">
+            <a href="tel:0766799157" class="btn btn-primary">Apelează acum</a>
+            <a href="https://wa.me/40766799157?text=Bună%20ziua,%20aș%20dori%20o%20programare%20pentru%20revizie%20auto.%20Mașina%20este:" target="_blank" rel="noopener" class="btn btn-whatsapp">Programare pe WhatsApp</a>
+            <a href="index.html#contact" class="btn btn-secondary">Vezi contact</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-row">
+        <small>© Logistik Speed Curier. Revizie auto, întreținere și service auto București, Sector 6.</small>
+        <div class="footer-links">
+          <a href="index.html">Acasă</a>
+          <a href="index.html#servicii">Servicii</a>
+          <a href="index.html#galerie">Galerie</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
