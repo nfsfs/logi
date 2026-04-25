@@ -733,14 +733,15 @@
       .map-wrap iframe { min-height:420px; }
     }
 
-    @media (max-width: 820px) {
-      .hero-banner-title img { height:300px; }
-      .nav-links, .nav-cta { display:none; }
-      .menu-btn { display:grid; place-items:center; }
-      .hero-copy { padding:24px; }
-      .hero-meta, .trust-row, .hero-points, .services-grid, .faq { grid-template-columns:1fr; }
-      .section { padding:56px 0; }
-    }
+  @media (max-width: 640px) {
+  .hero-banner-title img {
+    width: 100% !important;
+    height: 240px !important;
+    object-fit: cover !important;
+    object-position: 75% center !important;
+    border-radius: 20px !important;
+  }
+}
 
     @media (max-width: 640px) {
       .container { width:min(100vw - 24px, 1180px); }
