@@ -813,20 +813,18 @@
   gap: 18px;
 }
 
-#galerie .gallery-card {
-  height: 260px;
-  overflow: hidden;
-  border-radius: 24px;
-  position: relative;
-  padding: 18px;
-}
-
-#galerie .gallery-card img {
+.gallery-card {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  border-radius: 18px;
-  display: block;
+  overflow: hidden;
+  border-radius: 12px; /* dacă vrei colțuri rotunjite */
+
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ACESTA e cheia - acoperă tot spațiul */
+  object-position: center; /* centrează imaginea */
+  display: block; /* elimină spațiul de sub imagine */
 }
 
 @media (max-width: 900px) {
