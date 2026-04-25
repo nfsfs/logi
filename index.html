@@ -562,37 +562,72 @@
     .panel-visual { overflow:hidden; padding:0; }
     .panel-visual img { width:96%; height:96%; min-height:96%; object-fit:cover; margin:2%; border-radius:22px; }
 
-    .gallery-grid {
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:18px;
-    }
+    
+FLORIN OPREA <fopreaa@gmail.com>
+9:33 PM (0 minutes ago)
+to me
 
-    .gallery-card {
-      position:relative;
-      border-radius:28px;
-      overflow:hidden;
-      background:#242424;
-      min-height:220px;
-    }
+/* GALERIE - Grid responsiv */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Desktop: 3 coloane */
+  gap: 20px;
+  padding: 20px 0;
+}
 
-    .gallery-card img { width:90%; height:90%; object-fit:cover; margin:5%; border-radius:22px; }
+/* Card-urile */
+.gallery-card {
+  position: relative;
+  width: 100%;
+  height: 350px; /* Înălțime fixă pentru desktop */
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: #1a1a1a; /* Culoare de fundal dacă imaginea nu se încarcă */
+}
 
-    .gallery-label {
-      position:absolute;
-      left:18px;
-      bottom:18px;
-      padding:10px 14px;
-      border-radius:999px;
-      background:rgba(24,24,24,.72);
-      border:1px solid rgba(255,255,255,.08);
-      backdrop-filter:blur(10px);
-      font-size:11px;
-      font-weight:700;
-      letter-spacing:.12em;
-      text-transform:uppercase;
-    }
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.3s ease; /* Efect hover opțional */
+}
 
+/* Efect hover opțional */
+.gallery-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Link-uri - asigură că ocupă tot cardul */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* RESPONSIVE - MOBIL */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: 1fr; /* O singură coloană pe mobil */
+    gap: 15px;
+  }
+  
+  .gallery-card {
+    height: 280px; /* Înălțime mai mică pentru mobil */
+  }
+}
+
+/* RESPONSIVE - TABLET */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 coloane pe tablet */
+  }
+  
+  .gallery-card {
+    height: 300px;
+  }
+}
     .faq { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
 
     .faq-item {
