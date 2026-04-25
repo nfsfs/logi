@@ -562,73 +562,7 @@
     .panel-visual { overflow:hidden; padding:0; }
     .panel-visual img { width:96%; height:96%; min-height:96%; object-fit:cover; margin:2%; border-radius:22px; }
 
-    
-FLORIN OPREA <fopreaa@gmail.com>
-9:33 PM (0 minutes ago)
-to me
-
-/* GALERIE - Grid responsiv */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Desktop: 3 coloane */
-  gap: 20px;
-  padding: 20px 0;
-}
-
-/* Card-urile */
-.gallery-card {
-  position: relative;
-  width: 100%;
-  height: 350px; /* Înălțime fixă pentru desktop */
-  overflow: hidden;
-  border-radius: 12px;
-  background-color: #1a1a1a; /* Culoare de fundal dacă imaginea nu se încarcă */
-}
-
-.gallery-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  transition: transform 0.3s ease; /* Efect hover opțional */
-}
-
-/* Efect hover opțional */
-.gallery-card:hover img {
-  transform: scale(1.05);
-}
-
-/* Link-uri - asigură că ocupă tot cardul */
-a {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-}
-
-/* RESPONSIVE - MOBIL */
-@media (max-width: 768px) {
-  .gallery-grid {
-    grid-template-columns: 1fr; /* O singură coloană pe mobil */
-    gap: 15px;
-  }
-  
-  .gallery-card {
-    height: 280px; /* Înălțime mai mică pentru mobil */
-  }
-}
-
-/* RESPONSIVE - TABLET */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 coloane pe tablet */
-  }
-  
-  .gallery-card {
-    height: 300px;
-  }
-}
-    .faq { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.faq { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
 
     .faq-item {
       padding:18px;
@@ -789,7 +723,7 @@ a {
     .contact-wrap { gap:18px; }
 
     @media (max-width: 1100px) {
-      .hero-grid, .split, .contact-wrap, .gallery-grid, .section-head {
+      .hero-grid, .split, .contact-wrap, .section-head {
         grid-template-columns:1fr;
       }
 
@@ -827,7 +761,7 @@ a {
         background:rgba(24,24,24,.96);
       }
       .hero-shot { min-height:220px; }
-      .hero-shot img, .panel-visual img, .gallery-card img {
+      .hero-shot img, .panel-visual img {
         height:auto;
         min-height:0;
       }
@@ -842,47 +776,73 @@ a {
       }
     }
 
+  
+    /* GALERIE REPARATA - desktop 3 coloane, tableta 2, telefon 1 */
     #galerie .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:20px;
+      padding:20px 0;
+    }
 
-.gallery-card {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  border-radius: 12px; /* dacă vrei colțuri rotunjite */
+    #galerie .gallery-grid > a {
+      display:block;
+      text-decoration:none;
+      color:inherit;
+    }
 
-.gallery-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* ACESTA e cheia - acoperă tot spațiul */
-  object-position: center; /* centrează imaginea */
-  display: block; /* elimină spațiul de sub imagine */
-}
+    #galerie .gallery-card {
+      position:relative;
+      width:100%;
+      height:300px;
+      overflow:hidden;
+      border-radius:24px;
+      background:#1a1a1a;
+      border:1px solid rgba(255,255,255,.14);
+      box-shadow:0 18px 45px rgba(0,0,0,.24);
+    }
 
-@media (max-width: 900px) {
-  #galerie .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    #galerie .gallery-card img {
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center;
+      display:block;
+      border-radius:24px;
+      transition:transform .3s ease;
+    }
 
-  #galerie .gallery-card {
-    height: 230px;
-  }
-}
+    #galerie .gallery-card:hover img {
+      transform:scale(1.035);
+    }
 
-@media (max-width: 640px) {
-  #galerie .gallery-grid {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
+    @media (max-width: 1024px) {
+      #galerie .gallery-grid {
+        grid-template-columns:repeat(2, 1fr);
+      }
 
-  #galerie .gallery-card {
-    height: 230px;
-    border-radius: 22px;
-  }
-}
+      #galerie .gallery-card {
+        height:280px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      #galerie .gallery-grid {
+        grid-template-columns:1fr;
+        gap:18px;
+        padding:14px 0;
+      }
+
+      #galerie .gallery-card {
+        height:240px;
+        border-radius:22px;
+      }
+
+      #galerie .gallery-card img {
+        border-radius:22px;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -1082,38 +1042,41 @@ a {
     </div>
 
     <div class="gallery-grid">
+      <a href="poze-mecanica.html">
+        <div class="gallery-card">
+          <img loading="lazy" decoding="async" src="images/poza-mecanica.png" alt="Mecanica auto Logistik Speed Curier">
+        </div>
+      </a>
 
-      <a href="poze-mecanica.html" style="text-decoration:none; color:inherit; display:block;">
-  <div class="gallery-card">
-    <img loading="lazy" decoding="async" src="images/poza-mecanica.png" alt="Mecanica auto Logistik Speed Curier" />
-  </div>
-</a>
-<a href="poze-mecanica.html" style="text-decoration:none; color:inherit; display:block;">
-  <div class="gallery-card">
-    <img loading="lazy" decoding="async" src="images/poza-diagnoza.png" alt="Diagnoza auto Logistik Speed Curier" />
-  </div>
-</a>
-<a href="poze-mecanica.html" style="text-decoration:none; color:inherit; display:block;">
-  <div class="gallery-card">
-    <img loading="lazy" decoding="async" src="images/poza-ac.png" alt="Incarcare freon auto R134A R1234YF Logistik Speed Curier" />
-  </div>
-</a>
-<a href="poze-mecanica.html" style="text-decoration:none; color:inherit; display:block;">
-  <div class="gallery-card">
-    <img loading="lazy" decoding="async" src="images/poza-tinichigerie.png" alt="Tinichigerie auto Logistik Speed Curier" />
-  </div>
-</a>
-<a href="poze-mecanica.html" style="text-decoration:none; color:inherit; display:block;">
-  <div class="gallery-card">
-    <img loading="lazy" decoding="async" src="images/poza-vopsitorie.png" alt="Vopsitorie auto Logistik Speed Curier" />
-  </div>
-</a>
-<a href="poze-mecanica.html" style="text-decoration:none; color:inherit; display:block;">
-  <div class="gallery-card">
-    <img loading="lazy" decoding="async" src="images/poza-statieitp.png" alt="Statie ITP Logistik Speed Curier" />
-  </div>
-</a>
+      <a href="poze-mecanica.html">
+        <div class="gallery-card">
+          <img loading="lazy" decoding="async" src="images/poza-diagnoza.png" alt="Diagnoza auto Logistik Speed Curier">
+        </div>
+      </a>
 
+      <a href="poze-mecanica.html">
+        <div class="gallery-card">
+          <img loading="lazy" decoding="async" src="images/poza-ac.png" alt="Incarcare freon auto R134A R1234YF Logistik Speed Curier">
+        </div>
+      </a>
+
+      <a href="poze-mecanica.html">
+        <div class="gallery-card">
+          <img loading="lazy" decoding="async" src="images/poza-tinichigerie.png" alt="Tinichigerie auto Logistik Speed Curier">
+        </div>
+      </a>
+
+      <a href="poze-mecanica.html">
+        <div class="gallery-card">
+          <img loading="lazy" decoding="async" src="images/poza-vopsitorie.png" alt="Vopsitorie auto Logistik Speed Curier">
+        </div>
+      </a>
+
+      <a href="poze-mecanica.html">
+        <div class="gallery-card">
+          <img loading="lazy" decoding="async" src="images/poza-statieitp.png" alt="Statie ITP Logistik Speed Curier">
+        </div>
+      </a>
     </div>
   </div>
 </section>
