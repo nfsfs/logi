@@ -720,37 +720,32 @@
     </div>
   </footer>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      
-    // Incarca poze pe site
-      const images = [
-        'images/tractari1.jpeg',
-        'images/tractari2.jpeg',
-        'images/tractari3.jpeg',
-        'images/tractari4.jpeg'
-      ];
-      
-      let currentIndex = 0;
-      const imgElement = document.getElementById('sliderImg');
-      const counterElement = null;
-      
-      const updateSlider = (direction) => {
-        // Logica pentru buclă (loop) la capete
-        currentIndex = (currentIndex + direction + images.length) % images.length;
-        
-        // Schimbăm sursa imaginii
-        imgElement.src = images[currentIndex];
-        
-        // Actualizăm indicatorul (adaugăm 1 pentru că indexul începe de la 0)
-        counterElement.textContent = if (counterElement) {
-  counterElement.textContent = `${currentIndex + 1} / ${sliderImages.length}`;
-};
-      };
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
 
-      document.getElementById('sliderPrev').addEventListener('click', () => updateSlider(-1));
-      document.getElementById('sliderNext').addEventListener('click', () => updateSlider(1));
-    });
-  </script>
+    // Incarca poze pe site
+    const images = [
+      'images/tractari1.jpeg',
+      'images/tractari2.jpeg',
+      'images/tractari3.jpeg',
+      'images/tractari4.jpeg'
+    ];
+
+    let currentIndex = 0;
+
+    const imgElement = document.getElementById('sliderImg');
+    const prevButton = document.getElementById('sliderPrev');
+    const nextButton = document.getElementById('sliderNext');
+
+    function updateSlider(direction) {
+      currentIndex = (currentIndex + direction + images.length) % images.length;
+      imgElement.src = images[currentIndex];
+    }
+
+    prevButton.addEventListener('click', () => updateSlider(-1));
+    nextButton.addEventListener('click', () => updateSlider(1));
+
+  });
+</script>
 </body>
 </html>
