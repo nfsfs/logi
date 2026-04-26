@@ -544,7 +544,6 @@
               <img id="sliderImg" class="slider-image" src="images/tractari1.jpeg" alt="Tractari Auto Logistik">
               <button class="slider-arrow slider-next" id="sliderNext" aria-label="Înainte">&#8594;</button>
             </div>
-            <div class="slider-indicator" id="sliderCounter">1 / 4</div>
           </div>
           </div>
       </div>
@@ -732,7 +731,7 @@
       
       let currentIndex = 0;
       const imgElement = document.getElementById('sliderImg');
-      const counterElement = document.getElementById('sliderCounter');
+      const counterElement = null;
       
       const updateSlider = (direction) => {
         // Logica pentru buclă (loop) la capete
@@ -742,7 +741,9 @@
         imgElement.src = images[currentIndex];
         
         // Actualizăm indicatorul (adaugăm 1 pentru că indexul începe de la 0)
-        counterElement.textContent = `${currentIndex + 1} / ${images.length}`;
+        counterElement.textContent = if (counterElement) {
+  counterElement.textContent = `${currentIndex + 1} / ${sliderImages.length}`;
+};
       };
 
       document.getElementById('sliderPrev').addEventListener('click', () => updateSlider(-1));
